@@ -19,7 +19,7 @@ This information will be used to determine:
 ## Results
 - Senior Engineers and Senior Staff have the largest pool of retirement-age employees (29,414 and 28,254 respectively).
 
-![Retiring Employees](Resources/retiring_titles.png)
+![Retiring Employees](Resources/Retiring_titles.png)
 
 - There are 90,398 total employees nearing retirement.
 
@@ -44,6 +44,11 @@ The number of employees entering retirement is over fity times as much as the am
 
 2. We can determine the amount of individuals not retirering or mentoring by combining the the total workers either mentoring or tutoring, and subtracting them from the total amount of current working employees:
 
-	- J
-
-
+	- Total current employees using:
+		
+		SELECT 
+		(SELECT COUNT (*) FROM employees) - 
+		(SELECT COUNT (*) FROM mentorship_eligibility)-
+		(SELECT COUNT (*) FROM unique_titles) AS Difference;
+	
+	- The total amount of remaining workers is 208,077! With only 1,549 eligible mentors, there are 134 employees to every 1 available mentor. 
