@@ -12,8 +12,7 @@ This information will be used to determine:
 - If there are enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees.
 
 ## Resources 
-- Data Sources: 
-- PH-EmployeeDB(Employee_Database_challenge.sql)
+- Data Sources:  PH-EmployeeDB(Employee_Database_challenge.sql) -- There are sample files in the 'Resources' folder where the data tables were created from.
 - PostgreSQL 11.14
 
 ## Results
