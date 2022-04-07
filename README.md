@@ -32,7 +32,7 @@ The number of employees entering retirement is over fity times as much as the am
 1. Many of the retirement-eligible employees held multiple positions:
 
 	- Using the following query, we can create a new table and count how many workers held multiple titles:
-		
+		```SQL
 		SELECT emp_no, COUNT(emp_no)
 		INTO worked_multiple
 		FROM retirement_titles
@@ -40,14 +40,14 @@ The number of employees entering retirement is over fity times as much as the am
 		HAVING COUNT(emp_no)>1;
 
 		SELECT COUNT (emp_no)emp_no FROM worked_multiple;
-
+		```
 2. We can determine the amount of individuals not retirering or mentoring by combining the the total workers either mentoring or tutoring, and subtracting them from the total amount of current working employees:
 
 	- Total current employees using:
-		
+		```SQL
 		SELECT 
 		(SELECT COUNT (*) FROM employees) - 
 		(SELECT COUNT (*) FROM mentorship_eligibility)-
 		(SELECT COUNT (*) FROM unique_titles) AS Difference;
-	
+		```
 	- The total amount of remaining workers is 208,077! With only 1,549 eligible mentors, there are 134 employees to every 1 available mentor. 
